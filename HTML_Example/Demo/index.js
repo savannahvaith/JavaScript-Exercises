@@ -1,1 +1,1 @@
-hi frenz 
+document.write('Hi Frenz'); 
