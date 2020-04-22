@@ -2,8 +2,10 @@
 JavaScript Demos and Exercises - Software Cohort March 2020
 
 ## Contents
-  - HTML Examples
-  - CSS Examples
+  - Intro to HTML
+    - HTML Basics
+    - CSS Basics
+    - JavaScript script tags 
   - Variable Declaration
     - Operators
   - Flow of control 
