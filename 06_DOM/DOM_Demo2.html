@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo 2</title>
+  </head>
+  <body>
+    <p>The quick brown fox jumps over the lazy dog!</p>
+    <div>
+      <p id="para2" class="test">This is a paragraph text.</p>
+      <p>This is another paragraph</p>
+      <p>This is another paragraph</p>
+    </div>
+    <ul>
+      <li><a href="text.doc"> Word Document</a></li>
+      <li><a href="text2.doc"> Another 1</a></li>
+      <li><a href="image.ppt"> Powerpoint document</a></li>
+      <li><a href="imag2.ppt"> Ppt 2 document</a></li>
+    </ul>
+    <script>
+      //   let para2 = document.getElementById("para2"); // OLD WAY
+      //   let para2 = document.querySelector("#para2"); // w3c standard, IE8
+      //   para2.style.backgroundColor = "#ff0000";
+
+      //   let allP = document.getElementsByTagName("p"); // OLD WAY
+      let allP = document.querySelectorAll("div p"); //w3c standard
+
+      for (let i = 0; i < allP.length; i++) {
+        allP[i].style.backgroundColor = "#ff0000";
+      }
+
+      // Attribute selectors
+      // $= --> ending with
+      // ^=  --> starting with
+      // *= --> containing
+      let wordDoc = document.querySelectorAll("a[href$='doc']");
+
+      for (let i = 0; i < wordDoc.length; i++) {
+        wordDoc[i].style.backgroundColor = "#ff0000";
+      }
+
+      // Create new content
+      // W3 Recommended!
+      //   let para2 = document.querySelector("#para2");
+      let newP = document.createElement("p");
+      let theText = document.createTextNode("I love JS");
+      newP.appendChild(theText); // <p> I love JS </p>
+      //   para2.appendChild(newP);
+
+      // Quick and Dirty - very very very very bad practise!!!!!
+      let para2 = document.querySelector("#para2");
+      para2.innerHTML += "<h2>We LOVE JS</h2>";
+    </script>
+  </body>
+</html>
