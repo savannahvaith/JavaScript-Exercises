@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">Accept.</p>
+    <p id="p2">Forgive.</p>
+    <p id="p3">Be Happy.</p>
+    <p id="p4">Be grateful.</p>
+    <p id="p5">Live in the moment.</p>
+
+    <button id="butt1" type="button">Click ME!</button>
+    <a href="https://qa.com" id="butt2">Click me</a>
+
+    <script>
+      let butt1 = document.querySelector("#butt1");
+
+      function doStuff() {
+        alert("stuff was done!");
+      }
+
+      let butt2 = document.querySelector("#butt2");
+      function doOtherStuff() {
+        alert("Other stuff was done");
+      }
+
+      //   butt1.onclick = doStuff;
+      //   butt2.onclick = doOtherStuff;
+
+      butt1.onclick = function () {
+        doStuff();
+        console.log("hello im here");
+        doOtherStuff();
+      };
+
+      butt2.onclick = function (evt) {
+        evt.preventDefault();
+        doOtherStuff();
+      };
+
+      // Hook up an array of events
+      let allP = document.querySelectorAll("p");
+
+      for (let i = 0; i < allP.length; i++) {
+        allP[i].onclick = function () {
+          alert("I was clicked!");
+        };
+      }
+    </script>
+  </body>
+</html>

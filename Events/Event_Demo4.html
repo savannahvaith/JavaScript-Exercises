@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="b1" type="button">Click ME!</button>
+    <a href="https://qa.com" id="b2">QA Website</a>
+    <script>
+      let b1 = document.querySelector("#b1");
+      let b2 = document.querySelector("#b2");
+
+      function doStuff() {
+        alert("Stuff was done");
+      }
+
+      b1.addEventListener("click", doStuff, false);
+      console.log("Going to remove event listener now...");
+      b1.removeEventListener("click", doStuff, false);
+
+      b2.addEventListener("click", function (event) {
+        event.preventDefault();
+        doStuff();
+      });
+    </script>
+  </body>
+</html>

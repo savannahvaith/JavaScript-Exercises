@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="b1" type="button" style="background-color: #ff0000;">
+      Who is this
+    </button>
+
+    <script>
+      // 'This' refers to the "OWNER" of the function / the object that the function is a method of
+
+      // When we define our function in a page, the owner is the page / window object
+      // An onclick property is owned by the HTML element that it belongs to
+
+      // 'this' refers to the window object
+      function doSomething() {
+        this.style.color = "#cc0000";
+      }
+
+      console.dir(this);
+
+      let b1 = document.querySelector("#b1");
+      b1.onclick = function () {
+        this.style.color = "#4fdc47";
+        // 'this' refers to the HTML element and it's colours is changed!
+        console.dir(this);
+      };
+    </script>
+  </body>
+</html>
