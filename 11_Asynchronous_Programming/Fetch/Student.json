@@ -1,0 +1,22 @@
+{
+  "Students": [
+    {
+      "id": 1,
+      "name": "Savannah",
+      "teacher": "Renoto Lopes",
+      "courseCode": "QAJSFUND"
+    },
+    {
+      "id": 2,
+      "name": "Humann",
+      "teacher": "Savannah",
+      "courseCode": "QAJSFUND"
+    },
+    {
+      "id": 3,
+      "name": "Maya",
+      "teacher": "Savannah",
+      "courseCode": "QAHTMLCSS"
+    }
+  ]
+}
