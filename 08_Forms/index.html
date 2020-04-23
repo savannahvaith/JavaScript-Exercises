@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms!</title>
+  </head>
+  <body>
+    <form id="details" method="GET" action="form.html">
+      <fieldset>
+        <legend>Your details</legend>
+        <ol>
+          <li>
+            <label for="username">Username:</label>
+            <input id="username" name="username" type="text" />
+          </li>
+          <li>
+            <label for="title"> Title: </label>
+            <select id="title" name="title">
+              <option value="Dr">Dr</option>
+              <option value="Mr">Mr</option>
+              <option value="Miss">Miss</option>
+              <option value="Mrs">Mrs</option>
+            </select>
+          </li>
+          <li>
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" />
+          </li>
+          <li>
+            <label for="Phone">Phone:</label>
+            <input id="phone" name="phone" type="tel" />
+          </li>
+        </ol>
+      </fieldset>
+      <fieldset>
+        <legend>Card details</legend>
+        <ol>
+          <li>
+            <fieldset>
+              <legend>Card Type</legend>
+              <ol>
+                <li>
+                  <label for="visa"> Visa</label>
+                  <input id="visa" value="visa" type="radio" name="cardtype" />
+                </li>
+                <li>
+                  <label for="amex"> Amex</label>
+                  <input id="amex" value="amex" type="radio" name="cardtype" />
+                </li>
+                <li>
+                  <label for="mastercard"> Master Card</label>
+                  <input
+                    id="mastercard"
+                    value="mastercard"
+                    type="radio"
+                    name="cardtype"
+                  />
+                </li>
+               
+              </ol>
+            </fieldset>
+             <li>
+                  <label for="Subscribe">Subscribe to the news letter</label>
+                  <input id="Subscribe" name="Subscribe" type="checkbox" />
+                </li>
+          </li>
+        </ol>
+      </fieldset>
+      <fieldset>
+        <button id="butt1" type="submit">Form value</button>
+        <button id="reset" type="reset">Reset</button>
+      </fieldset>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
