@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>JS Reg Exp</title>
+  </head>
+  <body>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+      // i  is a modifier (modifies the search to be case-insensitive).
+      //i	-- Perform case-insensitive matching
+      //The search() method searches a string for a specified value,
+      //and returns the position of the match.
+
+      function myFunction() {
+        let str = "Visit W3Org!";
+
+        let pattern = new RegExp("W3Org", "i");
+        let n = str.search(pattern);
+
+        document.getElementById("demo").innerHTML = n;
+      }
+    </script>
+  </body>
+</html>

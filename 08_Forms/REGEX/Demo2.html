@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <p>Replace "Microsoft" with "Google" in the paragraph below:</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo">Please visit Microsoft!</p>
+
+    <script>
+      function myFunction() {
+        let str = document.getElementById("demo").innerHTML;
+
+        let txt = str.replace("Microsoft", "Google");
+
+        document.getElementById("demo").innerHTML = txt;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>08_HTML5_Form_Demo2_FormControls</title>
+    <style>
+      /*Validation With CSS3*/
+
+      input:required {
+            outline: 1px dashed blue;
+        }
+
+      input:optional {
+            outline: 1px solid green;
+        }
+    </style>
+  </head>
+  <body>
+    <form id="myForm" action="forms.htm" method="get">
+        <p>
+            <input type="submit" value="click!" />
+        </p>
+    </form>
+    <!-- HTML 5 form attribute-->
+    <!--Now can be placed anywhere and add a form attribute-->
+    <!--useful when form tags dynamically added-->
+    <!--logical from need to be broken up in the UI-->
+    <!--Not supported in all browser-->
+    <p>
+       <input name="myVal" type="text" form="myForm" />
+    </p>
+    <form novalidate>
+    <form>
+      <p>Name: <input type="text" required autofocus /></p>
+
+      <p>Address: <input type="text" /></p>
+      <p>Email: <input type="email" required /></p>
+      <p>URL: <input type="url" required placeholder="http://"/></p>
+      <p>Tel: <input type="url" required></p>
+      <p>Number: <input type="number" min="1" max="12" step="2" value="1"/></p>
+      <p>Range: <input type="range" min="1" max="100" value="50" step="2"/></p>
+      <p>Date: <input id="startdate" name="startdate" min="2016-01-01" max="2020-01-01" type="date">
+        </p>
+                <p>
+                    Date/Time: <input type="datetime-local" />
+                </p>
+
+                <p>
+                    Month/Year: <input type="month" />
+                </p>
+
+                <p>
+                    Week/Year: <input type="week" />
+                </p>
+                <p>
+                    Time: <input type="time" />
+                </p> 
+      <p>
+         Color: <input type="color" />
+        </p>
+      <p>
+              country code: <input type="text" name="country_code"
+        pattern="[A-Za-z]{3}" title="three letter country code"></p>
+      <!-- <!-- Data List -->
+      Browser Choice: <input type="text" list="browsers" name="browser"/>
+         <datalist id="browsers">
+             <option value="Internet Explorer">
+             <option value="Firefox">
+             <option value="Google Chrome">
+             <option value="Opera">
+             <option value="Safari">
+        </datalist>
+      <input type="search" results="5" />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
