@@ -24,4 +24,8 @@ JavaScript Demos and Exercises - Software Cohort March 2020
     - Closures
   - DOM
   - Events
+  - Forms
+  - JSON
+  - API Calls
+  - Asynchronous Programming
   
