@@ -28,4 +28,5 @@ JavaScript Demos and Exercises - Software Cohort March 2020
   - JSON
   - API Calls
   - Asynchronous Programming
+  - OOP 
   
