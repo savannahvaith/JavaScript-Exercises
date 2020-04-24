@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./CSS/loginstyle.css" rel="stylesheet" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+  </head>
+  <body>
+    <button type="submit" class="fadeIn fourth" id="logoutButt">
+      Log Out
+    </button>
+    <table>
+      <tr>
+        <th>
+          <button type="button" class="btn btn-success" id="AddPet">
+            Add Pet
+          </button>
+          <button type="button" class="btn btn-danger" id="DeletePet">
+            Del Pet
+          </button>
+          <button type="button" class="btn btn-info" id="GetPet">
+            Get Pet
+          </button>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <form id="form">
+            <input type="text" id="id" placeholder="ID" />
+            <input type="text" id="name" placeholder="Name" />
+            <input type="text" id="photoUrls" placeholder="photo Url" />
+          </form>
+        </td>
+        <td>
+          <ol>
+            <li id="getId"></li>
+            <li id="getName"></li>
+          </ol>
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script src="./JS/logout.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+</html>
