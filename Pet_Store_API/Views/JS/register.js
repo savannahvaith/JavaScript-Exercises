@@ -1,5 +1,5 @@
 const REQ = new XMLHttpRequest();
-
+const URL = "https://petstore.swagger.io/v2";
 let registerButt = document.querySelector('#registerButt');
 let form = document.querySelector('#form');
 let data = "{";
@@ -23,7 +23,7 @@ function registerUser() {
             window.location.href = "http://127.0.0.1:5500/Pet_Store_API/Views/login.html";
         }
     }
-    REQ.open('POST', "https://petstore.swagger.io/v2/user");
+    REQ.open('POST', URL + "/user");
     REQ.setRequestHeader('Content-type', 'Application/json');
     REQ.send(data);
 }

@@ -1,5 +1,5 @@
 const REQ = new XMLHttpRequest();
-
+const URL = "https://petstore.swagger.io/v2";
 let logout = document.querySelector('#logoutButt');
 function logoutUser() {
     REQ.onload = () => {
@@ -9,7 +9,7 @@ function logoutUser() {
             window.location.href = "http://127.0.0.1:5500/Pet_Store_API/Views/index.html";
         }
     }
-    REQ.open("GET", "https://petstore.swagger.io/v2/user/logout")
+    REQ.open("GET", URL + "/user/logout")
     REQ.setRequestHeader('Content-Type', 'Application/json');
     REQ.send();
 }
@@ -44,7 +44,7 @@ function addPet() {
             data = "";
         }
     }
-    REQ.open('POST', 'https://petstore.swagger.io/v2/pet');
+    REQ.open('POST', URL + '/pet');
     REQ.setRequestHeader('Content-Type', "Application/JSON");
     REQ.send(data);
 }
@@ -65,7 +65,7 @@ function deletePet() {
             console.log(REQ.response);
         }
     }
-    REQ.open('DELETE', `https://petstore.swagger.io/v2/pet/${id}`);
+    REQ.open('DELETE', URL + `/pet/${id}`);
     REQ.setRequestHeader('Content-Type', 'Application/JSON');
     REQ.send();
 
@@ -89,7 +89,7 @@ function getInfo() {
             document.querySelector('#getName').innerHTML = responseObject.name;
         }
     }
-    REQ.open("GET", `https://petstore.swagger.io/v2/pet/${id}`);
+    REQ.open("GET", URL + `/pet/${id}`);
     REQ.setRequestHeader('Content-Type', 'Application/JSON');
     REQ.responseType = 'json';
     REQ.send();
