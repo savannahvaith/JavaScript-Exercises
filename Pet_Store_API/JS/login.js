@@ -9,8 +9,8 @@ function loginUser() {
         if (REQ.status === 200) {
             console.log('Successfully Logged in');
             console.log(REQ.response);
+            localStorage.setItem("username", username);
             window.location.href = "http://127.0.0.1:5500/Pet_Store_API/Views/dashboard.html";
-
         }
     }
     REQ.open('GET', `https://petstore.swagger.io/v2/user/login?username=${username}&password=${password}`);
