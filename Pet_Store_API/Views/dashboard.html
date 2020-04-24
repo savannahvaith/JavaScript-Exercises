@@ -4,49 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="../CSS/loginstyle.css" rel="stylesheet" />
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
       id="bootstrap-css"
     />
+    
   </head>
   <body>
-    <button type="submit" class="fadeIn fourth" id="logoutButt">
-      Log Out
-    </button>
-    <table>
-      <tr>
-        <th>
-          <button type="button" class="btn btn-success" id="AddPet">
-            Add Pet
-          </button>
-          <button type="button" class="btn btn-danger" id="DeletePet">
-            Del Pet
-          </button>
-          <button type="button" class="btn btn-info" id="GetPet">
-            Get Pet
-          </button>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <form id="form">
-            <input type="text" id="id" placeholder="ID" />
-            <input type="text" id="name" placeholder="Name" />
-            <input type="text" id="photoUrls" placeholder="photo Url" />
-          </form>
-        </td>
-        <td>
-          <ol>
-            <li id="getId"></li>
-            <li id="getName"></li>
-          </ol>
-        </td>
-      </tr>
-    </table>
+       <div class="dropdown">
+      <button class="fadeIn dropbtn">Settings</button>
+      <div class="dropdown-content">
+        <a id="logoutButt">Log out </button>
+        <a id="updateUser" href="update-user.html">Update User</a>
+        <a href="#">Link 3</a>
+      </div>
+      </div>
+      <div class="wrapper fadeIn">
+        <h2 style="text-align: center;" id="user"></h2>
+        <table>
+          <tr>
+            <td>
+              <button type="button" class="btn btn-success" id="AddPet">
+                Add Pet
+              </button>
+              <button type="button" class="btn btn-danger" id="DeletePet">
+                Del Pet
+              </button>
+              <button type="button" class="btn btn-info" id="GetPet">
+                Get Pet
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="fadeIn second">
+                <form id="form">
+                  <input type="text" id="id" placeholder="ID" />
+                  <input type="text" id="name" placeholder="Name" />
+                  <input type="text" id="photoUrls" placeholder="photo Url" />
+                </form>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="container">
+      <table>
+        <tr>
+          <th>Your Pets:</th>
+        </tr>
+        <tr>
+          <td>
+            <p id="getPet"></p>
+          </td>
+        </tr>
+      </table>
+    
   </body>
-  <script src="../JS/logout.js"></script>
+  <script src="../JS/dashboard.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 </html>
